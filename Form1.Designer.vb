@@ -35,26 +35,27 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgDatos = New System.Windows.Forms.DataGridView()
         Me.cbUnidades = New System.Windows.Forms.ComboBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         CType(Me.dgDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbProducto
         '
-        Me.tbProducto.Location = New System.Drawing.Point(103, 72)
+        Me.tbProducto.Location = New System.Drawing.Point(112, 28)
         Me.tbProducto.Name = "tbProducto"
         Me.tbProducto.Size = New System.Drawing.Size(164, 20)
         Me.tbProducto.TabIndex = 0
         '
         'tbPrecio
         '
-        Me.tbPrecio.Location = New System.Drawing.Point(103, 236)
+        Me.tbPrecio.Location = New System.Drawing.Point(112, 192)
         Me.tbPrecio.Name = "tbPrecio"
         Me.tbPrecio.Size = New System.Drawing.Size(164, 20)
         Me.tbPrecio.TabIndex = 0
         '
         'tbInStock
         '
-        Me.tbInStock.Location = New System.Drawing.Point(103, 280)
+        Me.tbInStock.Location = New System.Drawing.Point(112, 236)
         Me.tbInStock.Name = "tbInStock"
         Me.tbInStock.Size = New System.Drawing.Size(164, 20)
         Me.tbInStock.TabIndex = 0
@@ -62,7 +63,7 @@ Partial Class Form1
         'cbProveedor
         '
         Me.cbProveedor.FormattingEnabled = True
-        Me.cbProveedor.Location = New System.Drawing.Point(103, 114)
+        Me.cbProveedor.Location = New System.Drawing.Point(112, 70)
         Me.cbProveedor.Name = "cbProveedor"
         Me.cbProveedor.Size = New System.Drawing.Size(164, 21)
         Me.cbProveedor.TabIndex = 1
@@ -70,7 +71,7 @@ Partial Class Form1
         'cbCategoria
         '
         Me.cbCategoria.FormattingEnabled = True
-        Me.cbCategoria.Location = New System.Drawing.Point(103, 154)
+        Me.cbCategoria.Location = New System.Drawing.Point(112, 110)
         Me.cbCategoria.Name = "cbCategoria"
         Me.cbCategoria.Size = New System.Drawing.Size(164, 21)
         Me.cbCategoria.TabIndex = 1
@@ -78,7 +79,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 72)
+        Me.Label1.Location = New System.Drawing.Point(22, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 13)
         Me.Label1.TabIndex = 2
@@ -87,7 +88,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 114)
+        Me.Label2.Location = New System.Drawing.Point(22, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 13)
         Me.Label2.TabIndex = 2
@@ -96,7 +97,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 157)
+        Me.Label3.Location = New System.Drawing.Point(22, 113)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 2
@@ -105,7 +106,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 204)
+        Me.Label4.Location = New System.Drawing.Point(21, 160)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 13)
         Me.Label4.TabIndex = 2
@@ -114,7 +115,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 243)
+        Me.Label5.Location = New System.Drawing.Point(22, 199)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(37, 13)
         Me.Label5.TabIndex = 2
@@ -123,7 +124,7 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 287)
+        Me.Label6.Location = New System.Drawing.Point(22, 243)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 2
@@ -132,24 +133,34 @@ Partial Class Form1
         'dgDatos
         '
         Me.dgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDatos.Location = New System.Drawing.Point(358, 72)
+        Me.dgDatos.Location = New System.Drawing.Point(332, 58)
         Me.dgDatos.Name = "dgDatos"
-        Me.dgDatos.Size = New System.Drawing.Size(448, 228)
+        Me.dgDatos.Size = New System.Drawing.Size(455, 228)
         Me.dgDatos.TabIndex = 3
         '
         'cbUnidades
         '
         Me.cbUnidades.FormattingEnabled = True
-        Me.cbUnidades.Location = New System.Drawing.Point(103, 201)
+        Me.cbUnidades.Location = New System.Drawing.Point(112, 157)
         Me.cbUnidades.Name = "cbUnidades"
         Me.cbUnidades.Size = New System.Drawing.Size(164, 21)
         Me.cbUnidades.TabIndex = 4
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Location = New System.Drawing.Point(332, 18)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 5
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(844, 331)
+        Me.ClientSize = New System.Drawing.Size(802, 298)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.cbUnidades)
         Me.Controls.Add(Me.dgDatos)
         Me.Controls.Add(Me.Label6)
@@ -184,4 +195,5 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents dgDatos As DataGridView
     Friend WithEvents cbUnidades As ComboBox
+    Friend WithEvents btnGuardar As Button
 End Class

@@ -116,6 +116,9 @@ Creado Datetime default(getdate())
 Insert Into Proveedor(Proveedor,NomRepresentante,Telefono,IdDep,IdMun) 
 values('Tecnológia Max','Jose Mendoza',87946841,2,6);
 
+Insert Into Proveedor(Proveedor,NomRepresentante,Telefono,IdDep,IdMun) 
+values('San Juan Lacteos','Juan Peréz',87749871,1,1);
+
 select * from Proveedor;
 
 select P.Proveedor,P.NomRepresentante,P.Telefono,D.NomDepartamento,M.NomMunicipio
@@ -123,5 +126,52 @@ from Proveedor P
 Join Departamento D On D.IdDepartamento = P.IdDep
 Join Municipio M On M.IdMunicipio = P.IdMun
 
+Create Table Categoria(
+	IdCategoria Int Not Null Primary Key Identity(1,1),
+	Categoria Varchar(50) Not Null Unique,
+);
+
+Insert Into Categoria 
+Values ('Tecnologia'),
+	   ('Abarroteria'),
+	   ('Lacteos'),
+	   ('Bebidas'),
+	   ('Hogar');
+
+Create Table Unidad(
+	IdUnidad Int Not Null Primary Key Identity(1,1),
+	UnidadDes Varchar(25) Not Null
+);
+
+Insert Into Unidad 
+Values ('12 - 550ml botella'),
+		('5 - 1 lb bolsa'),
+		('10 - 8 oz Paquete'),
+		('3 pack');
 
 
+Create Table Producto(
+	IdProducto Int Primary Key Identity(1,1),
+	Producto Varchar(50) not Null Unique,
+	IdProveedor Int Foreign Key References Proveedor(IdProveedor),
+	IdCategoria Int Foreign Key References Categoria(IdCategoria),
+	IdUnidad Int Foreign key References Unidad(IdUnidad),
+	Precio Real Not Null,
+	InStock Int Not Null,
+	Estado bit default (1),
+	Creado Datetime default(getdate())
+);
+
+Insert Into Producto(Producto,IdProveedor,IdCategoria,IdUnidad,Precio,InStock) 
+Values ('Teclado',1,1,4,15,5);
+
+Insert Into Producto(Producto,Precio,InStock) 
+Values ('Pantalla',125,3);
+
+select * from Producto;
+
+Select P.Producto,Pro.Proveedor,Cat.Categoria,U.UnidadDes,P.Precio,P.InStock
+From Producto P
+Join Proveedor Pro On Pro.IdProveedor = P.IdProveedor
+Join Categoria Cat On Cat.IdCategoria = P.IdCategoria
+Join Unidad U On U.IdUnidad = P.IdUnidad
